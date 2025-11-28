@@ -146,13 +146,6 @@ CLOUDINARY_API_SECRET=
 STRIPE_SECRET=
 FINNHUB_API_KEY=
 ```
-
----
-
-## 🖼️ Screenshots
-
-*(Add images of mobile app, web dashboard, and key features here)*
-
 ---
 
 ## 🧠 What I Learned
