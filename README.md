@@ -1,273 +1,176 @@
-# 🟩 **Olive Stocks — Full Stack Project (Backend + Web Frontend + Mobile App)**
+# 🟢 Olive Stocks
 
-A real-time market intelligence platform providing stock data, AI-powered insights, curated recommendations, watchlists, portfolio tracking, and premium subscription features — built with **Node.js**, **Next.js**, and **Flutter**.
-
----
-
-## 📌 **Overview**
-
-Olive Stocks is a multi-platform financial analytics system providing:
-
-* **Real-time stock market data**
-* **Historical price charts & analysis**
-* **AI-powered investment insights**
-* **Watchlists & portfolio tracking**
-* **Curated stock suggestions** (Stock of the Month, Quality Picks)
-* **Market news feed**
-* **User accounts & authentication**
-* **Subscription plans** (Free + Paid tiers)
-* **Secure payment processing** (Stripe, Braintree)
-* **Flutter mobile app + Next.js website + Node backend**
+**Real-time market data & AI-powered insights for smarter investing.**
+A multi-platform stock tracking and investment insights app built with **Flutter (mobile)**, **Next.js (web)**, and **Node.js/Express + MongoDB (backend)**.
 
 ---
 
-# 📁 **Project Structure**
+## 🚀 Live Demo
+
+* **Mobile App (Flutter)** – Coming soon / Internal testing
+* **Web App (Next.js)** – [https://www.olivestocks.com/]
+* **API (Backend)**
+
+---
+
+## 📌 Key Features
+
+* 📈 **Real-time & Historical Market Data** – Powered by Finnhub and other reliable providers.
+* 🤖 **AI Insights & Analysis** – Provides actionable insights for smarter investing decisions.
+* 📊 **Portfolios & Watchlists** – Track multiple portfolios and maintain custom watchlists.
+* 🌟 **Curated Stock Suggestions** – Includes “Quality Stocks” and “Stock of the Month.”
+* 📰 **Market News Feed** – Stay updated with the latest market trends and news.
+* 💳 **Subscription Plans** – Free and premium tiers with account-based access.
+* 🔒 **User Authentication & Data Protection** – Login/signup with secure JWT-based authentication; user data is never sold.
+* ⚠️ **Standard Disclaimers** – For informational purposes only; not financial advice.
+* 💬 **Real-time Notifications** – Using Socket.io for instant updates.
+* 📂 **File Uploads** – Cloudinary integration for user uploads (avatars, documents).
+* 💵 **Payment Integration** – Stripe & Braintree supported for subscription plans.
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend
+
+* **Node.js** / **Express**
+* **MongoDB** / **Mongoose**
+* **Socket.io** (real-time)
+* **Braintree** / **Stripe** (payments)
+* **Cloudinary** (file storage)
+* **Finnhub API** (market data)
+* **Other Packages**: Axios, bcrypt, jsonwebtoken, cors, multer, nodemailer
+
+### Mobile (Flutter)
+
+* **Flutter SDK** + Dart
+* **State Management**: GetX / Provider
+* **HTTP Requests**: http package
+* **UI Packages**: carousel_slider, flutter_svg, flutter_rating, smooth_page_indicator
+* **Payment**: flutter_stripe
+* **Storage**: shared_preferences
+* **File Handling**: file_picker, image_picker
+* **Charts**: syncfusion_flutter_charts, fl_chart, flutter_echarts
+* **Real-time**: socket_io_client
+
+### Web (Next.js)
+
+* **React 18** + Next.js 14
+* **UI**: TailwindCSS + Radix UI + Framer Motion
+* **State & Data**: React Query, Zod validation, React Hook Form
+* **Charts & Visualizations**: Recharts, Echarts, react-gauge-chart
+* **Authentication**: next-auth + JWT
+* **Payments**: Stripe
+* **Socket.io Client** for real-time updates
+
+---
+
+## 📂 Project Structure
+
+### Backend
 
 ```
-/olivestocks-backend       → Node.js + Express + MongoDB API
-/olivestocks-flutter → Flutter mobile app (Android/iOS)
-/olivestocks-frontend → Next.js 14 web application
+/controllers
+/models
+/routes
+/middlewares
+/services
+/utils
+/config
+server.js
 ```
 
----
-
-# 🚀 **Features**
-
-### 📈 **Market Data**
-
-* Real-time stock prices (via Finnhub API)
-* Historical OHLC data
-* Technical indicators
-* Charts on Web + Mobile
-
-### 🤖 **AI-Powered Insights**
-
-* Automated stock summaries
-* Market trend detection
-* Smart suggestions for investors
-
-### 🧺 **Portfolios & Watchlists**
-
-* Manage multiple portfolios
-* Add/remove stocks
-* Gain/loss calculations
-
-### ⭐ **Curated Stock Lists**
-
-* *Quality Stocks*
-* *Stock of the Month*
-* *Top Gainers / Losers*
-
-### 📰 **Market News**
-
-* News feed integrated from external APIs
-* Categorized finance updates
-
-### 👤 **User Accounts**
-
-* JWT authentication
-* Google login (Flutter + Web)
-* Secure password management
-* Cloudinary for image uploads
-
-### 💳 **Subscriptions**
-
-* Free & paid tiers
-* Stripe + Braintree payment integration
-* Subscription validation middleware
-
-### 🔄 **Real-Time Functionality**
-
-* Socket.io for notifications
-* Live stock updates
-* Real-time chat/events where needed
-
----
-
-# 🛠️ **Tech Stack**
-
-## **Backend — Node.js / Express / MongoDB**
-
-* Express 5
-* Mongoose 8
-* JWT Auth
-* bcrypt password hashing
-* Multer file uploads
-* Cloudinary media storage
-* Stripe + Braintree payments
-* Socket.io real-time events
-* Finnhub API for market data
-
-### **Backend Package.json**
-
-Contains:
+### Flutter
 
 ```
-start: node server.js
-dev: nodemon server.js
+/lib
+  /models
+  /screens
+  /widgets
+  /services
+  /controllers
+/assets
+```
+
+### Next.js
+
+```
+/app
+/components
+/hooks
+/lib
+/utils
+/pages
 ```
 
 ---
 
-## **Web Frontend — Next.js 14 (App Router)**
+## ⚙️ Installation & Setup
 
-Features:
+### Backend
 
-* Authentication (NextAuth)
-* Dashboard + charts
-* Stock pages & news
-* Stripe integration
-* Analytics & real-time UI
-* Modern UI using Tailwind + Radix UI + Shadcn components
-
-Dependencies include:
-
-* React 18
-* Next 14
-* TanStack Query
-* Radix UI
-* Stripe
-* ECharts & Recharts
-* Framer Motion
-* Zod validation
-
----
-
-## 📱 **Mobile App — Flutter**
-
-Built with:
-
-* Dart SDK ^3.7
-* HTTP requests
-* Shared Preferences (local storage)
-* File & image picker
-* Charts (fl_chart, Syncfusion)
-* Carousel slider
-* Flutter Stripe
-* Google Sign-In
-* Socket.io client
-* XML parser
-* Flutter SVG + Cached Images
-
-Supports:
-
-* Login & Registration
-* Browse stocks
-* Charts + analysis
-* Manage watchlists
-* Market news
-* Payments
-* Notifications UI
-
----
-
-# ⚙️ **Backend Setup**
-
-### 1. Install dependencies
-
-```
+```bash
+git clone https://github.com/yourusername/backend_rafi.git
 cd backend_rafi
 npm install
-```
-
-### 2. Create `.env`
-
-```
-PORT=4000
-MONGO_URI=your_mongo_connection
-JWT_SECRET=your_secret_key
-FINNHUB_API_KEY=your_key
-CLOUDINARY_CLOUD_NAME=...
-CLOUDINARY_API_KEY=...
-CLOUDINARY_API_SECRET=...
-STRIPE_SECRET_KEY=...
-BRAINTREE_MERCHANT_ID=...
-BROKER_ENV=production
-```
-
-### 3. Start server
-
-```
+cp .env.example .env
 npm run dev
 ```
 
----
+### Flutter Mobile
 
-# 🌐 **Web Frontend Setup (Next.js)**
-
-```
-cd rafimassarwa
-npm install
-npm run dev
-```
-
-Env variables may include:
-
-```
-NEXT_PUBLIC_API_URL=
-GOOGLE_CLIENT_ID=
-STRIPE_PUBLIC_KEY=
-NEXTAUTH_SECRET=
-```
-
----
-
-# 📱 **Flutter App Setup**
-
-```
+```bash
+git clone https://github.com/yourusername/olive_stocks_flutter.git
 cd olive_stocks_flutter
 flutter pub get
 flutter run
 ```
 
-Update API base URL in:
+### Web Frontend
 
-```
-lib/constants/api.dart
-```
-
----
-
-# 🛡️ **Security & Disclaimers**
-
-The platform provides **informational stock analysis only**.
-It does **not** provide investment advice.
-User data is protected and **never sold or rented**.
-
----
-
-# 📦 **Deployment Notes**
-
-### Backend (Node)
-
-Render or Vercel — requires:
-
-```
-npm run build
-npm start
+```bash
+git clone https://github.com/yourusername/rafimassarwa.git
+cd rafimassarwa
+npm install
+npm run dev
 ```
 
-### Next.js Web
+**Environment variables for backend** (`.env`):
 
-Deployed via Vercel or Render.
-
-### Flutter App
-
-Deploy to Play Store + App Store (manual CI/CD optional).
-
----
-
-# 📝 **License**
-
-This project is protected; redistribution requires permission.
+```
+MONGO_URI=
+JWT_SECRET=
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+STRIPE_SECRET=
+FINNHUB_API_KEY=
+```
 
 ---
 
-# 👨‍💻 **Contributors**
+## 🖼️ Screenshots
 
-* Backend Developer
-* Frontend Developer
-* Mobile App Developer
-* AI/Market Data Integrations
+*(Add images of mobile app, web dashboard, and key features here)*
 
 ---
+
+## 🧠 What I Learned
+
+* Full-stack development with **Flutter + Next.js + Node.js/Express**.
+* Secure authentication with JWT and third-party integrations (Google, Stripe, Braintree).
+* Real-time features using **Socket.io**.
+* Cloud-based file storage & optimized media handling with Cloudinary.
+* API integration with **Finnhub** for stock data.
+* Charting & data visualization using Flutter and React libraries.
+* Clean, scalable folder structures for multi-platform apps.
+
+---
+
+## 📬 Contact
+
+**Rafi Massarwa**
+📧 [zihadul708@gmail.com](mailto:zihadul708@gmail.com)
+🌐 Portfolio: [http://zihadulislam.me/](http://zihadulislam.me/)
+🔗 LinkedIn: [https://www.linkedin.com/in/zihadulislam2](https://www.linkedin.com/in/zihadulislam2)
+
