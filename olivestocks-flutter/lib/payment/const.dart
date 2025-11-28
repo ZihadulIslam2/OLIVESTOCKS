@@ -1,0 +1,4 @@
+class Constants {
+  static const String publishableKey = 'pk_test_51RXwQACcgOOj8cVfdYyp6jF1oOS1Qg6PHycZbBrPSQ0wuXrCKyEjAA8XSmIl802REjz3qZj5VpWF0XXwVxC7buU5007AlTzQJ1';
+  static const String secretKey = 'STRIPE_SECRET_KEY=sk_test_51RXwQACcgOOj8cVfCixSy9pfAyrHdCLGqfRqvWXIqOlyBWmrkWfCPpnyASDt6s7u2yNZqmKtmT8toAfUFPyVcZQ000yUGyMCVx';
+}

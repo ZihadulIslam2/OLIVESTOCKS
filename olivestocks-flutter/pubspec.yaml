@@ -1,0 +1,94 @@
+name: olive_stocks_flutter
+description: "A new Flutter project."
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+  xml: ^6.2.0
+  http:
+  get:
+  file_picker:
+  image_picker:
+  shared_preferences: ^2.5.2
+  flutter_svg: ^2.1.0
+  bulleted_list: ^0.0.1+0.1a
+  percent_indicator: ^4.2.5
+  carousel_slider: ^5.0.0
+  smooth_page_indicator: ^1.2.1
+  pin_code_fields: ^8.0.1
+  fl_chart:
+  syncfusion_flutter_charts:
+  syncfusion_flutter_gauges:
+  flutter_rating: ^2.0.2
+  flutter_echarts: ^2.5.0
+  flutter_screenutil: ^5.9.3
+  dropdown_button2: ^2.3.9
+  cached_network_image: ^3.4.1
+  flutter_html:
+  intl: ^0.20.2
+  socket_io_client:
+  url_launcher: ^6.2.5
+  path: ^1.8.3
+  flutter_stripe: ^11.5.0
+  google_sign_in: ^6.1.5
+
+
+
+
+
+
+
+dependency_overrides:
+  flutter_math_fork: ^0.7.4
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/logos/
+    - assets/flags/
+    - assets/fonts/
+    - assets/images/avatar_notification/
+    - assets/images/paymentMethod/
+    - assets/images/flags/
+    - assets/images/cards/
+    - assets/new_image/
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Black.ttf
+          weight: 900
+        - asset: assets/fonts/poppins/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/poppins/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/poppins/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/poppins/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/poppins/Poppins-Light.ttf
+          weight: 300
+
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
